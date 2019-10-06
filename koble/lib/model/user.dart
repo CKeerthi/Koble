@@ -18,9 +18,9 @@ class User {
     this.websiteUrl,
     this.email,
     this.phoneNumber,
-    this.description,
+    this.description,}
     // this.id,
-  });
+  );
 
 
 }
