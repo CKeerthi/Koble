@@ -65,12 +65,12 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   void _startAddNewStartup(BuildContext ctx) {
-    showModalBottomSheet(
-      context: ctx,
-      builder: (_) {
-        return AddStartup(_addNewStartup);
-      },
-    );
+    // showModalBottomSheet(
+    //   context: ctx,
+    //   builder: (_) {
+    //     // return AddStartup(_addNewStartup);
+    //   },
+    // );
   }
 
   Icon custIcon = Icon(Icons.search);
@@ -91,7 +91,7 @@ class _HomeScreenState extends State<HomeScreen> {
         Scaffold(
           appBar: AppBar(
             title: custSearchBar,
-            backgroundColor: Colors.brown[200],
+            backgroundColor: Color.fromRGBO(27, 78, 150, 1),
             actions: <Widget>[
               IconButton(
                 icon: custIcon,
@@ -112,13 +112,13 @@ class _HomeScreenState extends State<HomeScreen> {
           body: values.length != 1
               ? StartupList(values)
               : StartupList([values[0]]),
-          floatingActionButtonLocation:
-              FloatingActionButtonLocation.centerFloat,
-          floatingActionButton: FloatingActionButton(
-            child: Icon(Icons.add),
-            backgroundColor: Colors.brown[200],
-            onPressed: () => _startAddNewStartup(context),
-          ),
+          // floatingActionButtonLocation:
+          //     FloatingActionButtonLocation.centerFloat,
+          // floatingActionButton: FloatingActionButton(
+          //   child: Icon(Icons.add),
+          //   backgroundColor: Colors.brown[200],
+          //   onPressed: () => _startAddNewStartup(context),
+          // ),
         ),
       ],
     );

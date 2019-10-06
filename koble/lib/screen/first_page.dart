@@ -14,6 +14,8 @@ class _FirstPageState extends State<FirstPage> {
         Expanded(
           child: Material(
             child: InkWell(
+              hoverColor: Color.fromRGBO(27, 78, 150, 0.5),
+              splashColor: Color.fromRGBO(27, 78, 150, 0.75),
               onTap: () {
                 Navigator.push(
                   context,
@@ -31,6 +33,8 @@ class _FirstPageState extends State<FirstPage> {
         Expanded(
           child: Material(
             child: InkWell(
+              hoverColor: Color.fromRGBO(216, 188, 69, 0.5),
+              splashColor: Color.fromRGBO(216, 188, 69, 0.75),
               onTap: () {},
               child: Center(child: Text("Startup")),
             ),

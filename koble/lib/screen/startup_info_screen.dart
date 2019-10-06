@@ -24,7 +24,9 @@ class StartupInfoScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(name),
+        title: Text(companyName),
+        backgroundColor: Color.fromRGBO(216, 188, 69, 1.0),
+
       ),
       body: ListView(
         children: <Widget>[

@@ -10,8 +10,11 @@ class StartupList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.all(25),
       child: CustomScrollView(
+        
         slivers: <Widget>[
+        
           SliverPadding(
             padding: EdgeInsets.only(top: 8.0),
             sliver: SliverGrid.count(
@@ -19,8 +22,8 @@ class StartupList extends StatelessWidget {
                 crossAxisCount: MediaQuery.of(context).size.width >= 1400
                     ? 5
                     : MediaQuery.of(context).size.width >= 800 ? 3 : 1,
-                mainAxisSpacing: 5.0,
-                crossAxisSpacing: 5,
+                mainAxisSpacing: 25.0,
+                crossAxisSpacing: 25,
                 children: dummyData
                     .map((su) => ProductItem(
                         su.name,

@@ -52,12 +52,13 @@ class ProductItem extends StatelessWidget {
             ),
             decoration: BoxDecoration(
               color: Colors.blue,
-              borderRadius: BorderRadius.all(
+              borderRadius: BorderRadius.only(topLeft:
                 Radius.circular(10.0),
+                topRight: Radius.circular(10.0),bottomLeft: Radius.circular(30.0),bottomRight: Radius.circular(10.0),
               ),
             ),
             height: 500,
-            width: 1000,
+            width: 500,
           ),
           Positioned(
               left: 0,
