@@ -15,7 +15,15 @@ class StartupList extends StatelessWidget {
           phoneNumber: "5197221234",
           description: "Startup",
           id: "123456789",
-      )
+      ),
+      User(name: "Bob",
+          companyName: "companyName",
+          companyLocation: "Kitchener",
+          websiteUrl: "www.google.com",
+          email: "nephthalim22@gmail.com",
+          phoneNumber: "5197221234",
+          description: "Startup",
+          id: "123456789",)
     ];
     return GridView.builder(
       padding: const EdgeInsets.all(10.0),
@@ -24,6 +32,13 @@ class StartupList extends StatelessWidget {
         return 
         ProductItem(
           dummyData[index].name,
+          dummyData[index].companyLocation,
+          dummyData[index].companyName,
+          dummyData[index].websiteUrl,
+          dummyData[index].email,
+          dummyData[index].description,
+          dummyData[index].phoneNumber,
+          dummyData[index].id,
         );
       },
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
