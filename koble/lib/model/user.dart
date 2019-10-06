@@ -4,12 +4,11 @@ class User {
   String companyLocation;
   String websiteUrl;
   String email;
-    String description;
+  String description;
   String phoneNumber;
-
+  String image;
 
   // String id;
-  
 
   User({
     this.name,
@@ -18,9 +17,7 @@ class User {
     this.websiteUrl,
     this.email,
     this.phoneNumber,
-    this.description,}
-    // this.id,
-  );
-
-
+    this.description,
+    this.image,
+  });
 }

@@ -9,7 +9,7 @@ class StartupInfoScreen extends StatelessWidget {
   final String email;
   final String description;
   final String phoneNumber;
-  // final String id;
+  final String image;
   StartupInfoScreen(
     this.name,
     this.companyName,
@@ -18,7 +18,7 @@ class StartupInfoScreen extends StatelessWidget {
     this.email,
     this.description,
     this.phoneNumber,
-    // this.id,
+    this.image,
   );
   @override
   Widget build(BuildContext context) {
@@ -38,7 +38,7 @@ class StartupInfoScreen extends StatelessWidget {
             companyLocation,
             description,
             phoneNumber,
-            // id,
+            image,
           )
         ],
       ),

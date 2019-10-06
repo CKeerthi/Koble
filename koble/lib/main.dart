@@ -9,12 +9,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Koble',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
       home: FirstPage(),
-      
     );
   }
 }

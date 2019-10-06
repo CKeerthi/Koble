@@ -10,6 +10,7 @@ class ProductItem extends StatelessWidget {
   final String email;
   final String description;
   final String phoneNumber;
+  final String image;
   // final String id;
   ProductItem(
     this.name,
@@ -19,7 +20,7 @@ class ProductItem extends StatelessWidget {
     this.email,
     this.description,
     this.phoneNumber,
-    // this.id,
+    this.image,
   );
 
   @override
@@ -37,7 +38,7 @@ class ProductItem extends StatelessWidget {
                 companyLocation,
                 description,
                 phoneNumber,
-                // id,
+                image,
               );
             },
           ),
@@ -51,10 +52,14 @@ class ProductItem extends StatelessWidget {
               child: Text(name),
             ),
             decoration: BoxDecoration(
-              color: Colors.blue,
-              borderRadius: BorderRadius.only(topLeft:
-                Radius.circular(10.0),
-                topRight: Radius.circular(10.0),bottomLeft: Radius.circular(30.0),bottomRight: Radius.circular(10.0),
+              image: DecorationImage(
+                image: AssetImage(image),
+              ),
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(10.0),
+                topRight: Radius.circular(10.0),
+                bottomLeft: Radius.circular(30.0),
+                bottomRight: Radius.circular(10.0),
               ),
             ),
             height: 500,

@@ -8,6 +8,7 @@ class StartupInfo extends StatelessWidget {
   final String email;
   final String description;
   final String phoneNumber;
+  final String image;
   // final String id;
   StartupInfo(
     this.name,
@@ -17,6 +18,7 @@ class StartupInfo extends StatelessWidget {
     this.email,
     this.description,
     this.phoneNumber,
+    this.image,
 
     // this.id,
   );
@@ -44,7 +46,7 @@ class StartupInfo extends StatelessWidget {
                             child: Text(name),
                           ),
                           decoration: BoxDecoration(
-                            color: Colors.blue,
+                            image: DecorationImage(image: AssetImage(image)),
                             borderRadius: BorderRadius.all(
                               Radius.circular(10.0),
                             ),
@@ -70,19 +72,19 @@ class StartupInfo extends StatelessWidget {
                       child: Column(
                         children: <Widget>[
                           Text(
-                            "Email: {$email}",
+                            "Email: $email",
                             overflow: TextOverflow.fade,
                           ),
                           Text(
-                            "Phone Number: {$phoneNumber}",
+                            "Phone Number: $phoneNumber",
                             overflow: TextOverflow.fade,
                           ),
                           Text(
-                            "Location {$companyLocation}",
+                            "Location: $companyLocation",
                             overflow: TextOverflow.fade,
                           ),
                           Text(
-                            "Company Website {$websiteUrl}",
+                            "Company Website: $websiteUrl",
                             overflow: TextOverflow.fade,
                           ),
                         ],
@@ -129,7 +131,7 @@ class StartupInfo extends StatelessWidget {
                             child: Text(name),
                           ),
                           decoration: BoxDecoration(
-                            color: Colors.blue,
+                            image: DecorationImage(image: AssetImage(image)),
                             borderRadius: BorderRadius.all(
                               Radius.circular(10.0),
                             ),

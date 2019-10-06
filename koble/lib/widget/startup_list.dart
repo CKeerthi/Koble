@@ -12,9 +12,7 @@ class StartupList extends StatelessWidget {
     return Container(
       margin: EdgeInsets.all(25),
       child: CustomScrollView(
-        
         slivers: <Widget>[
-        
           SliverPadding(
             padding: EdgeInsets.only(top: 8.0),
             sliver: SliverGrid.count(
@@ -32,7 +30,8 @@ class StartupList extends StatelessWidget {
                         su.websiteUrl,
                         su.email,
                         su.description,
-                        su.phoneNumber))
+                        su.phoneNumber,
+                        su.image))
                     .toList()
                 // ProductItem(
                 //   dummyData[i].name,
