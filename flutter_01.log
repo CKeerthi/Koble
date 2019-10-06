@@ -1,0 +1,91 @@
+Flutter crash report; please file at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run -d chrome
+
+## exception
+
+StateError: Bad state: Future already completed
+
+```
+#0      _Completer.completeError (dart:async/future_impl.dart:21:31)
+#1      VmService.dispose.<anonymous closure> (package:vm_service/vm_service.dart:1688:41)
+#2      Iterable.forEach (dart:core/iterable.dart:277:30)
+#3      VmService.dispose (package:vm_service/vm_service.dart:1688:24)
+#4      DwdsVmClient.close (package:dwds/src/dwds_vm_client.dart:25:12)
+<asynchronous suspension>
+#5      AppDebugServices.close (package:dwds/src/services/app_debug_services.dart:27:55)
+#6      DebugConnection.close (package:dwds/src/connections/debug_connection.dart:38:29)
+#7      _AsyncAwaitCompleter.start (dart:async-patch/async_patch.dart:43:6)
+#8      DebugConnection.close (package:dwds/src/connections/debug_connection.dart:35:21)
+#9      ResidentWebRunner._cleanup (package:flutter_tools/src/build_runner/resident_web_runner.dart:109:47)
+#10     _AsyncAwaitCompleter.start (dart:async-patch/async_patch.dart:43:6)
+#11     ResidentWebRunner._cleanup (package:flutter_tools/src/build_runner/resident_web_runner.dart:105:24)
+#12     ResidentWebRunner.cleanupAtFinish (package:flutter_tools/src/build_runner/resident_web_runner.dart:102:11)
+#13     _AsyncAwaitCompleter.start (dart:async-patch/async_patch.dart:43:6)
+#14     ResidentWebRunner.cleanupAtFinish (package:flutter_tools/src/build_runner/resident_web_runner.dart:101:31)
+#15     ResidentRunner.waitForAppToFinish (package:flutter_tools/src/resident_runner.dart:881:11)
+#16     _asyncThenWrapperHelper.<anonymous closure> (dart:async-patch/async_patch.dart:71:64)
+#17     _rootRunUnary (dart:async/zone.dart:1132:38)
+#18     _CustomZone.runUnary (dart:async/zone.dart:1029:19)
+#19     _FutureListener.handleValue (dart:async/future_impl.dart:137:18)
+#20     Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:678:45)
+#21     Future._propagateToListeners (dart:async/future_impl.dart:707:32)
+#22     Future._completeWithValue (dart:async/future_impl.dart:522:5)
+#23     Future._asyncComplete.<anonymous closure> (dart:async/future_impl.dart:552:7)
+#24     _rootRun (dart:async/zone.dart:1124:13)
+#25     _CustomZone.run (dart:async/zone.dart:1021:19)
+#26     _CustomZone.runGuarded (dart:async/zone.dart:923:7)
+#27     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:963:23)
+#28     _microtaskLoop (dart:async/schedule_microtask.dart:41:21)
+#29     _startMicrotaskLoop (dart:async/schedule_microtask.dart:50:5)
+#30     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:116:13)
+#31     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:173:5)
+```
+
+## flutter doctor
+
+```
+[32m[✓][39m Flutter (Channel master, v1.10.13-pre.10, on Mac OS X 10.14.5 18F132, locale
+    en-CA)
+    [32m•[39m Flutter version 1.10.13-pre.10 at
+      /Users/nephthalimabebe/Desktop/Flutter/flutter
+    [32m•[39m Framework revision f4b4616f87 (35 hours ago), 2019-10-04 20:01:04 -0700
+    [32m•[39m Engine revision 7d90779bb6
+    [32m•[39m Dart version 2.6.0 (build 2.6.0-dev.0.0 d6c6d12ebf)
+
+[33m[!][39m Android toolchain - develop for Android devices (Android SDK version 29.0.1)
+    [32m•[39m Android SDK at /Users/nephthalimabebe/Library/Android/sdk
+    [32m•[39m Android NDK location not configured (optional; useful for native profiling
+      support)
+    [32m•[39m Platform android-29, build-tools 29.0.1
+    [32m•[39m Java binary at: /Applications/Android
+      Studio.app/Contents/jre/jdk/Contents/Home/bin/java
+    [32m•[39m Java version OpenJDK Runtime Environment (build
+      1.8.0_152-release-1343-b01)
+    [33m![39m Some Android licenses not accepted.  To resolve this, run: flutter doctor
+      --android-licenses
+
+[32m[✓][39m Xcode - develop for iOS and macOS (Xcode 10.3)
+    [32m•[39m Xcode at /Applications/Xcode.app/Contents/Developer
+    [32m•[39m Xcode 10.3, Build version 10G8
+    [32m•[39m CocoaPods version 1.7.5
+
+[32m[✓][39m Chrome - develop for the web
+    [32m•[39m Chrome at /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+
+[32m[✓][39m Android Studio (version 3.4)
+    [32m•[39m Android Studio at /Applications/Android Studio.app/Contents
+    [32m•[39m Flutter plugin version 37.1.1
+    [32m•[39m Dart plugin version 183.6270
+    [32m•[39m Java version OpenJDK Runtime Environment (build
+      1.8.0_152-release-1343-b01)
+
+[32m[✓][39m Connected device (2 available)
+    [32m•[39m Chrome          • chrome          • web-javascript • Google Chrome
+      77.0.3865.90
+    [32m•[39m Headless Server • headless-server • web-javascript • Flutter Tools
+
+[33m![39m Doctor found issues in 1 category.
+```
