@@ -9,7 +9,7 @@ class StartupInfoScreen extends StatelessWidget {
   final String email;
   final String description;
   final String phoneNumber;
-  final String id;
+  // final String id;
   StartupInfoScreen(
     this.name,
     this.companyName,
@@ -18,7 +18,7 @@ class StartupInfoScreen extends StatelessWidget {
     this.email,
     this.description,
     this.phoneNumber,
-    this.id,
+    // this.id,
   );
   @override
   Widget build(BuildContext context) {
@@ -26,15 +26,19 @@ class StartupInfoScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(name),
       ),
-      body: StartupInfo(
-        name,
-        companyName,
-        websiteUrl,
-        email,
-        companyLocation,
-        description,
-        phoneNumber,
-        id,
+      body: ListView(
+        children: <Widget>[
+          StartupInfo(
+            name,
+            companyName,
+            websiteUrl,
+            email,
+            companyLocation,
+            description,
+            phoneNumber,
+            // id,
+          )
+        ],
       ),
     );
   }

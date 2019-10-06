@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:koble/screen/home_screen.dart';
+
+import './screen/first_page.dart';
 // import 'package:koble/screen/startup_info_screen.dart';
 
 void main() => runApp(MyApp());
@@ -12,10 +13,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomeScreen(),
-      // routes: {
-
-      // },
+      home: FirstPage(),
+      
     );
   }
 }

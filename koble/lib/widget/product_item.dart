@@ -10,7 +10,7 @@ class ProductItem extends StatelessWidget {
   final String email;
   final String description;
   final String phoneNumber;
-  final String id;
+  // final String id;
   ProductItem(
     this.name,
     this.companyName,
@@ -19,7 +19,7 @@ class ProductItem extends StatelessWidget {
     this.email,
     this.description,
     this.phoneNumber,
-    this.id,
+    // this.id,
   );
 
   @override
@@ -37,7 +37,7 @@ class ProductItem extends StatelessWidget {
                 companyLocation,
                 description,
                 phoneNumber,
-                id,
+                // id,
               );
             },
           ),

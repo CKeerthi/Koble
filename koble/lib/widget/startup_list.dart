@@ -3,42 +3,34 @@ import '../widget/product_item.dart';
 import '../model/user.dart';
 
 class StartupList extends StatelessWidget {
+  final List<User> dummyData;
+
+  StartupList(this.dummyData);
+
   @override
   Widget build(BuildContext context) {
-    List<User> dummyData = [
-      User(
-          name: "Nephy",
-          companyName: "companyName",
-          companyLocation: "Kitchener",
-          websiteUrl: "www.google.com",
-          email: "nephthalim22@gmail.com",
-          phoneNumber: "5197221234",
-          description: "Startup",
-          id: "123456789",
-      ),
-      User(name: "Bob",
-          companyName: "companyName",
-          companyLocation: "Kitchener",
-          websiteUrl: "www.google.com",
-          email: "nephthalim22@gmail.com",
-          phoneNumber: "5197221234",
-          description: "Startup",
-          id: "123456789",)
-    ];
+    // return Container(child: CustomScrollView(slivers: <Widget>[
+    //   SliverPadding(padding: EdgeInsets.only(top: 8.0),
+    //   sliver: SliverGrid.count(
+    //     childAspectRatio: ,
+    //   ),)
+    // ],),)
+
+
     return GridView.builder(
       padding: const EdgeInsets.all(10.0),
       itemCount: dummyData.length,
       itemBuilder: (ctx, index) {
-        return 
-        ProductItem(
+        return ProductItem(
           dummyData[index].name,
-          dummyData[index].companyLocation,
           dummyData[index].companyName,
+          dummyData[index].companyLocation,
           dummyData[index].websiteUrl,
           dummyData[index].email,
           dummyData[index].description,
           dummyData[index].phoneNumber,
-          dummyData[index].id,
+          
+          // dummyData[index].id,
         );
       },
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
